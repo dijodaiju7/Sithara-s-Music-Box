@@ -1,0 +1,689 @@
+body{
+    margin:30px;
+    text-align:center;
+    background-color: #eeeeee;
+   
+}
+#hid{
+    color: #222831;
+    font-family: 'Henri Didot';
+    font-size :50px; ;
+}
+
+.button{
+    transition: all 0.5s;
+    font: 18px Helvetica, Arial, sans-serif;
+    border: none;
+    background: #222831;
+    color: #eeeeee;
+    padding: 16px 40px;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+.button span{
+    cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button span:after{
+    content: "\266B";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button:hover span{
+    padding-right: 25px;
+ 
+}
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+input[type="text"] {
+    width: 100%;
+    padding: 16px 40px;
+   /* margin: 8px 0;*/
+    display: inline-block;
+    border: 1.5px solid #222831;
+    opacity: 0.8;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #eeeeee;
+    font-family: Arial, Helvetica, sans-serif
+
+
+    }
+
+    details {
+        border: 1.5px solid #222831;
+        border-radius: 4px;
+        padding: 16px 40px;
+        display: block;
+        width:40vw;
+        margin-left: auto;
+        margin-right: auto;     
+        background-color: #fbd46d;  
+        font-family: 'Dancing Script', cursive;
+        font-size: 22px;
+        opacity: 0.8;
+
+        
+    }
+    
+    summary {
+        font-weight: bold;
+       /* margin: -.5em -.5em 0;*/
+        padding: 16px 40px;
+        list-style: none;
+    }
+    
+    details[open] {
+        padding: 16px 40px;
+    }
+    
+    details[open] summary {
+        border-bottom: 1px solid #222831;
+      /*  margin-bottom: .5em;*/
+    }
+    details > summary::before {
+        content: '\266c';
+    }
+    
+    details[open] > summary::before {
+        content: '\266a';
+    }
+
+
+div.TAPEmain{
+    position:relative;
+    margin:0 auto;
+    background-color:#000;
+    height:200px;
+    width:300px;
+    border-radius:10px;
+    opacity: 0.8;
+    border:2px solid #666;
+    -moz-box-sizing:border-box;
+         box-sizing:border-box;
+}
+
+div.TAPEmain:before,
+div.TAPEmain:after{
+    content:"";
+    display:block;
+    height:50px;
+    width:0;
+    border-width: 7px 5px 4px 0;
+    border-color: transparent #000;
+    border-style: solid;
+    position:absolute;
+    bottom:10px;
+    left:-5px;
+    opacity: 0.8;
+}
+
+div.TAPEmain:after{
+    left:auto;
+    right:-5px;
+    border-width: 7px 0 4px 5px;
+}
+
+div.TAPEscrew{
+    position:absolute;
+    width:8px;
+    height:8px;
+    background:#000;
+    border-radius: 8px;
+    border:2px solid #000;
+    box-shadow: 0 2px 2px rgba(255,255,255,0.5) inset, 0 -1px 2px rgba(0,0,0,0.3) inset, 0 1px 1px rgba(255,255,255,0.5), 0 -1px 1px rgba(0,0,0,0.3);
+}
+
+div.TAPEscrew:before,
+div.TAPEscrew:after{
+    content:"";
+    display:block;
+    position:absolute;
+    top:4px;
+    left:4px;
+    margin-top:-1px;
+    width:6px;
+    margin-left:-3px;
+    height:2px;
+    background-color: #666;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.3) inset;
+}
+
+div.TAPEscrew#TAPEscrew01{
+    top:2px;
+    left:2px;
+}
+div.TAPEscrew#TAPEscrew01:before{
+    transform:rotate(30deg);
+    -ms-transform:rotate(30deg);
+    -webkit-transform:rotate(30deg);
+}
+div.TAPEscrew#TAPEscrew01:after{
+    transform:rotate(-60deg);
+    -ms-transform:rotate(-60deg);
+    -webkit-transform:rotate(-60deg);
+}
+div.TAPEscrew#TAPEscrew02{
+    top:2px;
+    right:2px;
+}
+div.TAPEscrew#TAPEscrew02:before{
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+}
+div.TAPEscrew#TAPEscrew02:after{
+    transform:rotate(-45deg);
+    -ms-transform:rotate(-45deg);
+    -webkit-transform:rotate(-45deg);
+}
+
+div.TAPEscrew#TAPEscrew03{
+    bottom:2px;
+    right:2px;
+}
+div.TAPEscrew#TAPEscrew03:before{
+    transform:rotate(60deg);
+    -ms-transform:rotate(60deg);
+    -webkit-transform:rotate(60deg);
+}
+div.TAPEscrew#TAPEscrew03:after{
+    transform:rotate(-30deg);
+    -ms-transform:rotate(-30deg);
+    -webkit-transform:rotate(-30deg);
+}
+
+div.TAPEscrew#TAPEscrew04{
+    bottom:2px;
+    left:2px;
+}
+div.TAPEscrew#TAPEscrew04:before{
+    transform:rotate(10deg);
+    -ms-transform:rotate(10deg);
+    -webkit-transform:rotate(10deg);
+}
+div.TAPEscrew#TAPEscrew04:after{
+    transform:rotate(-80deg);
+    -ms-transform:rotate(-80deg);
+    -webkit-transform:rotate(-80deg);
+}
+
+div.TAPEscrew#TAPEscrew05{
+    bottom:-18px;
+    left:50%;
+    margin-left:-4px;
+}
+div.TAPEscrew#TAPEscrew05:before{
+    transform:rotate(20deg);
+    -ms-transform:rotate(20deg);
+    -webkit-transform:rotate(20deg);
+}
+div.TAPEscrew#TAPEscrew05:after{
+    transform:rotate(-70deg);
+    -ms-transform:rotate(-70deg);
+    -webkit-transform:rotate(-70deg);
+}
+
+
+
+
+div.TAPElabel{
+    position:relative;
+    margin:22px auto 0;
+    width:270px;
+    height:120px;
+    background-color:#eee;
+    border-radius:0 0 2px 2px;
+    box-shadow: 0 1px 0px 1px rgba(0,0,0,0.2), 0 1px 2px rgba(255,255,255,0.5);
+
+    background: -moz-linear-gradient(top,  #eeeeee 35px, #000000 35px, #000000 53px, #fbd46d 53px); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(35px,#eeeeee), color-stop(35px,#000000), color-stop(38px,#000000), color-stop(38px,#fbd46d)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #eeeeee 35px,#000000 35px,#000000 38px,#fbd46d 38px); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #eeeeee 35px,#000000 35px,#000000 38px,#fbd46d 38px); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #eeeeee 35px,#000000 35px,#000000 38px,#fbd46d 38px); /* IE10+ */
+    background: linear-gradient(to bottom,  #eeeeee 35px, #000000 35px, #000000 38px, #fbd46d 38px); /* W3C */
+}
+
+div.TAPElabel:before{
+    content: "";
+    position:relative;
+    display: block;
+    top:-10px;
+    height:0px;
+    border-width: 0 10px 10px 10px;
+    border-color: #eee transparent;
+    border-style: solid;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+
+div.TAPEbump{
+    position:absolute;
+    width:210px;
+    bottom:-2px;
+    left:50%;
+    margin-left:-105px;
+    height:0;
+    border-width: 0 10px 50px 10px;
+    border-color: #000 transparent;
+    border-style: solid;
+    -moz-box-sizing:border-box;
+         box-sizing:border-box;
+}
+
+div.TAPEbump:before, div.TAPEbump:after{
+    content:"";
+    display: block;
+    position:relative;
+    width: 100%;
+    bottom:0;
+    height:0;
+    border-width: 2px 2px 0 2px;
+    border-color: #888 transparent;
+    border-style: solid;
+    -moz-box-sizing:border-box;
+         box-sizing:border-box;
+}
+
+div.TAPEbump:after{
+    bottom:-48px;
+    border-width: 2px 2px 0 2px;
+    border-color: #000 transparent;
+    width:calc(100% + 20px);
+    left:-10px;
+}
+
+div.TAPEhole{
+    position:absolute;
+    bottom:-45px;
+    height:12px;
+    width:12px;
+    background:#eeeeee;
+    border-radius: 10px;
+    /*border:1px solid #666;*/
+    box-shadow:  0 -2px #000 inset;
+}
+
+div#TAPEhole01{left:15px;}
+div#TAPEhole02{right:15px;}
+
+div.TAPEhole:after{
+    content:"";
+    position:absolute;
+    top:-7px;
+    height:12px;
+    width:12px;
+    background:#eeeeee;
+    border-radius: 4px;
+    box-shadow:  0 -2px #000 inset;
+}
+
+div#TAPEhole01:after{left:30px;}
+div#TAPEhole02:after{right:30px;}
+
+div.TAPEmecha{
+    position: relative;
+    background-color:#000;
+    height:37px;
+    width:170px;
+    padding:10px;
+    margin:28px auto 0;
+    border-radius: 30px;
+    box-shadow:0 0 0 5px #000 inset, 0 1px 1px 5px rgba(255,255,255,0.2) inset, 0 -1px 1px 5px rgba(0,0,0,0.2) inset;
+}
+
+div.TAPEgearhole{
+    height:33px;
+    width:33px;
+    background: #ccc;
+    border:2px solid #666;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+div#TAPEgearhole01{float:left;}
+div#TAPEgearhole02{float:right;}
+
+div.TAPEgear{
+    position:relative;
+    left:3px;
+    top:3px;
+    background-color: #fff;
+    border-radius: 30px;
+    height:95%;
+    width:95%;
+}
+
+div.TAPEcog{
+    margin:-1% auto;
+    width:6px;
+    height:102%;
+    position: relative;
+}
+
+div.TAPEcog:before,  div.TAPEcog:after{
+    content:"";
+    display:block;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+}
+
+div.TAPEcog:before{
+    transform:rotate(60deg);
+    -ms-transform:rotate(60deg);
+    -webkit-transform:rotate(60deg);
+}
+div.TAPEcog:after{
+    transform:rotate(120deg);
+    -ms-transform:rotate(120deg);
+    -webkit-transform:rotate(120deg);
+}
+
+div.TAPEcog, div.TAPEcog:before,  div.TAPEcog:after{
+    background: -moz-linear-gradient(top,  #ccc 15%, rgba(255,255,255,0) 15%, rgba(255,255,255,0) 85%, #ccc 85%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(15%,#ccc), color-stop(15%,rgba(255,255,255,0)), color-stop(85%,rgba(255,255,255,0)), color-stop(85%,#ccc)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ccc 15%,rgba(255,255,255,0) 15%,rgba(255,255,255,0) 85%,#ccc 85%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ccc 15%,rgba(255,255,255,0) 15%,rgba(255,255,255,0) 85%,#ccc 85%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ccc 15%,rgba(255,255,255,0) 15%,rgba(255,255,255,0) 85%,#ccc 85%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ccc 15%, rgba(255,255,255,0) 15%, rgba(255,255,255,0) 85%, #ccc 85%); /* W3C */
+}
+
+
+div.TAPEwindow{
+    width:40%;
+    height:20px;
+    background:#fff;
+    margin:2px auto 0;
+    border-width: 0 5px 7px 5px;
+    border-color: transparent #000 #000;
+    border-style: solid;
+    overflow:hidden;
+}
+
+div.TAPEwindow:after{
+    content: "";
+    display:block;
+    width:100%;
+    position:relative;
+    z-index:1;
+    height:100%;
+    background-color:rgba(0,0,0,0.1);
+}
+
+div.TAPEwheel{
+    width:33px;
+    height:33px;
+    border-radius: 100px;
+    position:relative;
+    transform:rotate(1deg);
+    -ms-transform:rotate(1deg);
+    -webkit-transform:rotate(1deg);
+}
+
+div#TAPEwheel01{
+    float:left;
+    left:-49px;
+    box-shadow: 0 0 0 24px #7b513f, -1px 1px 0 25px #895d39, 0 0 0 34px #7b513f, 0 1px 0 35px #6a4636, 0 0 0 49px #7b513f, 1px 0 0 50px #6a4636, 0 0 0 60px #7b513f;
+}
+
+div#TAPEwheel02{
+    float:right;
+    right:-49px;
+    box-shadow: 0 0 0 9px #7b513f, 0 1px 0 10px #6a4636, 0 0 0 19px #7b513f, 1px 0 0 20px #6a4636, 0 0 0 24px #7b513f, -1px 1px 0 25px #895d39,0 0 0 30px #7b513f;
+}
+
+div.TAPErule, div.TAPErule:before, div.TAPErule:after{
+    margin: -5px auto 0;
+    height:5px;
+    width: 0;
+    border-width: 0 1px;
+    border-color: transparent #777 transparent #999;
+    border-style: solid;
+}
+
+
+div.TAPErule:before, div.TAPErule:after{
+    content:"";
+    display:block;
+    position:relative;
+    left:-30px;
+}
+
+div.TAPErule:after{left: 30px;}
+
+div.TAPEscale{
+    width:50%;
+    margin:0 auto;
+    font-size: 0.65em;
+    color:#fff;
+    /*text-shadow:1px 1px 0 #666;*/
+    line-height: 1em;
+}
+
+div.TAPEscale span{
+    float:left;
+    display:block;
+    width:calc((100% - 10px)/3);
+    text-align: center;
+}
+
+div.TAPEscale span:first-child{margin-right:5px;}
+div.TAPEscale span:last-child{margin-left:5px;}
+
+div.TAPEdescription{
+    position:absolute;
+    top:0;
+    border-width:1px 0;
+    border-style:solid;
+    border-color:#777;
+    height:20px;
+    width:80%;
+    width:calc(100% - 5% - 55px);
+    margin: 0 5%;
+    margin-left:55px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 22px;
+}
+
+div.TAPEdescription:before{
+    text-align:center;
+    text-transform:uppercase;
+    display:block;
+    position:absolute;
+    /*padding:10px;*/
+    font-family: Arial;
+    font-size:30px;
+    font-weight:bold;
+    /*border:5px solid #555;*/
+    color:#fff;
+    background-color: #000;
+    line-height: 30px;
+    width:30px;
+    height:30px;
+    left:-43px;
+    top:-5px;
+}
+
+.sideA div.TAPEdescription:before{content:"A";}
+.sideB div.TAPEdescription:before{content:"B";}
+
+
+/*Animation*/
+
+div.TAPEgear {
+    -webkit-animation: TAPEspin 250s infinite linear alternate; /* Safari 4+ */
+    -moz-animation:    TAPEspin 250s infinite linear alternate; /* Fx 5+ */
+    -o-animation:      TAPEspin 250s infinite linear alternate; /* Opera 12+ */
+    animation:         TAPEspin 250s infinite linear alternate; /* IE 10+ */
+}
+
+div#TAPEwheel01{
+    -webkit-animation: TAPEtapeA 250s infinite linear alternate; /* Safari 4+ */
+    -moz-animation:    TAPEtapeA 250s infinite linear alternate; /* Fx 5+ */
+    -o-animation:      TAPEtapeA 250s infinite linear alternate; /* Opera 12+ */
+    animation:         TAPEtapeA 250s infinite linear alternate; /* IE 10+ */
+}
+
+div#TAPEwheel02{
+    -webkit-animation: TAPEtapeB 250s infinite linear alternate; /* Safari 4+ */
+    -moz-animation:    TAPEtapeB 250s infinite linear alternate; /* Fx 5+ */
+    -o-animation:      TAPEtapeB 250s infinite linear alternate; /* Opera 12+ */
+    animation:         TAPEtapeB 250s infinite linear alternate; /* IE 10+ */
+}
+
+
+@-webkit-keyframes TAPEspin {
+    0%  {
+        transform:rotate(0deg);
+        -webkit-transform:rotate(0deg);
+    }
+    100%  {
+        transform:rotate(-18000deg);
+        -webkit-transform:rotate(-18000deg);
+    }
+}
+
+@-moz-keyframes TAPEspin {
+    0%  {transform:rotate(0deg);}
+    100%  {transform:rotate(-18000deg);}
+}
+      
+@-o-keyframes TAPEspin {
+    0%  {transform:rotate(0deg);}
+    100%  {transform:rotate(-18000deg);}
+}
+
+@keyframes TAPEspin {
+    0%  {transform:rotate(0deg);}
+    100%  {transform:rotate(-18000deg);}
+}
+
+@-webkit-keyframes TAPEtapeA {
+    0%  {
+        transform:rotate(0deg);
+        -webkit-transform:rotate(0deg);
+        box-shadow: 0 0 0 24px #7b513f, -1px 1px 0 25px #895d39, 0 0 0 39px #7b513f, 0 1px 0 40px #6a4636, 0 0 0 57px #7b513f, 1px 0 0 58px #6a4636, 0 0 0 75px #7b513f;
+    }
+    100%  {
+        transform:rotate(-18000deg);
+        -webkit-transform:rotate(-18000deg);
+        box-shadow: 0 0 0 2px #7b513f, -1px 1px 0 3px #895d39, 0 0 0 7px #7b513f, 0 1px 0 8px #6a4636, 0 0 0 12px #7b513f, 1px 0 0 13px #6a4636, 0 0 0 15px #7b513f;
+    }
+}
+
+@-moz-keyframes TAPEtapeA {
+    0%  {
+        transform:rotate(0deg);
+        box-shadow: 0 0 0 24px #7b513f, -1px 1px 0 25px #895d39, 0 0 0 39px #7b513f, 0 1px 0 40px #6a4636, 0 0 0 57px #7b513f, 1px 0 0 58px #6a4636, 0 0 0 75px #7b513f;
+    }
+    100%  {
+        transform:rotate(-18000deg);
+        box-shadow: 0 0 0 2px #7b513f, -1px 1px 0 3px #895d39, 0 0 0 7px #7b513f, 0 1px 0 8px #6a4636, 0 0 0 12px #7b513f, 1px 0 0 13px #6a4636, 0 0 0 15px #7b513f;
+    }
+}
+      
+@-o-keyframes TAPEtapeA {
+    0%  {
+        transform:rotate(0deg);
+        box-shadow: 0 0 0 24px #7b513f, -1px 1px 0 25px #895d39, 0 0 0 39px #7b513f, 0 1px 0 40px #6a4636, 0 0 0 57px #7b513f, 1px 0 0 58px #6a4636, 0 0 0 75px #7b513f;
+    }
+    100%  {
+        transform:rotate(-18000deg);
+        box-shadow: 0 0 0 2px #7b513f, -1px 1px 0 3px #895d39, 0 0 0 7px #7b513f, 0 1px 0 8px #6a4636, 0 0 0 12px #7b513f, 1px 0 0 13px #6a4636, 0 0 0 15px #7b513f;
+    }
+}
+
+@keyframes TAPEtapeA {
+    0%  {
+        transform:rotate(0deg);
+        box-shadow: 0 0 0 24px #7b513f, -1px 1px 0 25px #895d39, 0 0 0 39px #7b513f, 0 1px 0 40px #6a4636, 0 0 0 57px #7b513f, 1px 0 0 58px #6a4636, 0 0 0 75px #7b513f;
+    }
+    100%  {
+        transform:rotate(-18000deg);
+        box-shadow: 0 0 0 2px #7b513f, -1px 1px 0 3px #895d39, 0 0 0 7px #7b513f, 0 1px 0 8px #6a4636, 0 0 0 12px #7b513f, 1px 0 0 13px #6a4636, 0 0 0 15px #7b513f;
+    }
+}
+
+@-webkit-keyframes TAPEtapeB {
+    0%  {
+        transform:rotate(-18000deg);
+        -webkit-transform:rotate(-18000deg);
+        box-shadow: 0 0 0 2px #7b513f, -1px 1px 0 3px #895d39, 0 0 0 7px #7b513f, 0 1px 0 8px #6a4636, 0 0 0 12px #7b513f, 1px 0 0 13px #6a4636, 0 0 0 15px #7b513f;
+    }
+    100%  {
+        transform:rotate(0deg);
+        -webkit-transform:rotate(0deg);
+        box-shadow: 0 0 0 24px #7b513f, -1px 1px 0 25px #895d39, 0 0 0 39px #7b513f, 0 1px 0 40px #6a4636, 0 0 0 57px #7b513f, 1px 0 0 58px #6a4636, 0 0 0 75px #7b513f;
+    }
+
+}
+    
+@-moz-keyframes TAPEtapeB {
+    0%  {
+        transform:rotate(-18000deg);
+        box-shadow: 0 0 0 2px #7b513f, -1px 1px 0 3px #895d39, 0 0 0 7px #7b513f, 0 1px 0 8px #6a4636, 0 0 0 12px #7b513f, 1px 0 0 13px #6a4636, 0 0 0 15px #7b513f;
+    }
+    100%  {
+        transform:rotate(0deg);
+        box-shadow: 0 0 0 24px #7b513f, -1px 1px 0 25px #895d39, 0 0 0 34px #7b513f, 0 1px 0 35px #6a4636, 0 0 0 54px #7b513f, 1px 0 0 55px #6a4636, 0 0 0 70px #7b513f;
+    }
+}
+      
+@-o-keyframes TAPEtapeB {
+    0%  {
+        transform:rotate(-18000deg);
+        box-shadow: 0 0 0 2px #7b513f, -1px 1px 0 3px #895d39, 0 0 0 7px #7b513f, 0 1px 0 8px #6a4636, 0 0 0 12px #7b513f, 1px 0 0 13px #6a4636, 0 0 0 15px #7b513f;
+    }
+    100%  {
+        transform:rotate(0deg);
+        box-shadow: 0 0 0 24px #7b513f, -1px 1px 0 25px #895d39, 0 0 0 34px #7b513f, 0 1px 0 35px #6a4636, 0 0 0 54px #7b513f, 1px 0 0 55px #6a4636, 0 0 0 70px #7b513f;
+    }
+}
+            
+@keyframes TAPEtapeB {
+    0%  {
+        transform:rotate(-18000deg);
+        box-shadow: 0 0 0 2px #7b513f, -1px 1px 0 3px #895d39, 0 0 0 7px #7b513f, 0 1px 0 8px #6a4636, 0 0 0 12px #7b513f, 1px 0 0 13px #6a4636, 0 0 0 15px #7b513f;
+    }
+    100%  {
+        transform:rotate(0deg);
+        box-shadow: 0 0 0 24px #7b513f, -1px 1px 0 25px #895d39, 0 0 0 34px #7b513f, 0 1px 0 35px #6a4636, 0 0 0 54px #7b513f, 1px 0 0 55px #6a4636, 0 0 0 70px #7b513f;
+    }
+}
+
+input[type=checkbox] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+label { 
+    -webkit-appearance: push-button;
+    -moz-appearance: button; 
+    display: inline-block;
+    margin: 30px 0;
+    cursor: pointer;
+    padding:5px 10px;
+    font-family:"Helvetica","arial",sans-serif;
+    font-size:.8em;
+}
+
+/* Toggled State */
+input[type=checkbox]:checked ~ .TAPEmain div.TAPEgear,
+input[type=checkbox]:checked ~ .TAPEmain div#TAPEwheel01,
+input[type=checkbox]:checked ~ .TAPEmain div#TAPEwheel02 {
+            animation-play-state:paused;
+    -webkit-animation-play-state:paused;              
+}

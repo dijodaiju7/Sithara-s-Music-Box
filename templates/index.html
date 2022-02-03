@@ -1,0 +1,79 @@
+       <!DOCTYPE html>
+       <head>
+           <title>Sithara's Music Box</title>
+           <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+           <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="http://fonts.cdnfonts.com/css/henri-didot" rel="stylesheet">
+       </head>
+       <body>
+   <div id="hid">
+Sithara's Music Box
+   </div><br>
+
+        <div class="TAPEmain sideA">
+
+        	<div class="TAPEscrew" id="TAPEscrew01"></div>
+        	<div class="TAPEscrew" id="TAPEscrew02"></div>
+        	<div class="TAPEscrew" id="TAPEscrew03"></div>
+        	<div class="TAPEscrew" id="TAPEscrew04"></div>
+
+        	<div class="TAPElabel">
+                <div class="TAPEdescription">
+                    Sithara Krishnakumar
+                </div>
+
+                <div class="TAPEmecha">
+                    <div class="TAPEgearhole" id="TAPEgearhole01">
+                        <div class="TAPEgear">
+                            <div class="TAPEcog"></div>
+                        </div>
+                    </div>
+                    <div class="TAPEgearhole" id="TAPEgearhole02">
+                        <div class="TAPEgear">
+                            <div class="TAPEcog"></div>
+                        </div>
+                    </div>
+
+                    <div class="TAPEwindow">
+                        <div class="TAPEwheel" id="TAPEwheel01"></div>
+                        <div class="TAPEwheel" id="TAPEwheel02"></div>
+                    </div>
+
+                    <div class="TAPErule"></div>
+                    <div class="TAPEscale">
+                        <span>100</span>
+                        <span>50</span>
+                        <span>0</span>
+                    </div>
+
+                </div>
+            </div>
+
+        	<div class="TAPEbump">
+        		<div class="TAPEscrew" id="TAPEscrew05"></div>
+           		<div class="TAPEhole" id="TAPEhole01"></div>
+                <div class="TAPEhole" id="TAPEhole02"></div>
+        	</div>
+
+        </div><br>
+
+
+        <div id="">
+        <form action="/predict" method="POST">
+            <label>
+              <input id="fname" type="text" placeholder="Search for lyrics">
+              
+            </label>
+            <br>
+            <button class="button"><span>Complete</span></button>
+          </form>
+          </div><br>
+          <div>
+          <details>
+            <summary> Lyrics</summary>
+             {{out_data}}
+        </details>
+        </div>
+        </body>
